@@ -1,47 +1,30 @@
-// Traversing the DOM
+// Adding Element to DOM
+// Create Element
 
-let val;
-let list = document.querySelector('ul');
-let listItem = document.querySelector('ul li:first-child');
+// let olItem = document.createElement('li');
 
-val = list;
-val = listItem;
+// // Add Id and Class
+// olItem.className = "a new another-class";
+// olItem.id = "new-element";
 
-// Get the Child Nodes
-val = list;
-val = list.childNodes;
-val = list.childNodes[2];
-val = list.childNodes[1].nodeName;
-val = list.childNodes[0].nodeType;
+// // Add Atrribute
+// olItem.setAttribute('title', 'A title to new Element');
 
-// 1 Element
-// 2 Attribute
-// 3 Text Node
-// 8 Comment
-// 9 Document Itself
-// 10 Doctype
-val = list.childNodes;
+// olItem.appendChild(document.createTextNode('javascript'));
+// document.querySelector('ol').appendChild(olItem);
 
-val = list.children[0];
+// Add Element in unodered list
 
-list.children[0].textContent = "Hello";
-val = list.children[1].children[0];
-val = list.children[1].children[0].href;
+let ulItem = document.createElement('li');
+let link = document.createElement('a');
 
-val = list.firstChild;
-val = list.firstElementChild;
-val = list.lastChild;
-val = list.lastElementChild;
-val = list.childElementCount;
+link.appendChild(document.createTextNode('Instragram'));
+link.setAttribute('href','http://www.instagram.com');
 
-val = listItem.parentElement;
-val = listItem.parentNode;
-val = listItem.parentElement.parentElement;
+ulItem.appendChild(link);
 
-val = listItem.nextSibling.nextSibling;
-val = listItem.nextElementSibling.nextElementSibling;
-val = document.querySelector('ul li:last-child');
-val = val.previousSibling;
-val = val.previousElementSibling;
+document.querySelector('ul').appendChild(ulItem);
 
-console.log(val);
+
+console.log(ulItem);
+// console.log(link);
