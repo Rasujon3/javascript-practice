@@ -1,30 +1,15 @@
-// Adding Element to DOM
-// Create Element
+// Replacing Element
+let newHeading = document.createElement('h1');
+newHeading.appendChild(document.createTextNode('h1 New Heading'));
+newHeading.className = "sample-class";
 
-// let olItem = document.createElement('li');
+let oldHeading = document.querySelector('h3');
 
-// // Add Id and Class
-// olItem.className = "a new another-class";
-// olItem.id = "new-element";
+let parent = document.querySelector('.container');
+// parent = oldHeading.parentElement;
 
-// // Add Atrribute
-// olItem.setAttribute('title', 'A title to new Element');
+parent.replaceChild(newHeading, oldHeading);
 
-// olItem.appendChild(document.createTextNode('javascript'));
-// document.querySelector('ol').appendChild(olItem);
-
-// Add Element in unodered list
-
-let ulItem = document.createElement('li');
-let link = document.createElement('a');
-
-link.appendChild(document.createTextNode('Instragram'));
-link.setAttribute('href','http://www.instagram.com');
-
-ulItem.appendChild(link);
-
-document.querySelector('ul').appendChild(ulItem);
-
-
-console.log(ulItem);
-// console.log(link);
+console.log(newHeading);
+console.log(oldHeading);
+console.log(parent);
