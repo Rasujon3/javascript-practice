@@ -1,47 +1,47 @@
-// Multiselector
-// document.getElementsByClassName()
+// Traversing the DOM
 
-let list = document.getElementsByClassName('sample-class');
+let val;
+let list = document.querySelector('ul');
+let listItem = document.querySelector('ul li:first-child');
 
-list[0].style.background = 'red';
-list[0].style.color = 'white';
-list[0].style.padding = '10px';
-list[0].textContent = 'Hello World';
+val = list;
+val = listItem;
 
-// console.log(list[0]);
+// Get the Child Nodes
+val = list;
+val = list.childNodes;
+val = list.childNodes[2];
+val = list.childNodes[1].nodeName;
+val = list.childNodes[0].nodeType;
 
-// document.getElementsByTagName()
-list = document.getElementsByTagName('li');
-list = document.querySelector('ol').getElementsByTagName('li');
+// 1 Element
+// 2 Attribute
+// 3 Text Node
+// 8 Comment
+// 9 Document Itself
+// 10 Doctype
+val = list.childNodes;
 
+val = list.children[0];
 
-let lis = Array.from(list);
-lis.forEach(item => {
-    // console.log(item);
-});
+list.children[0].textContent = "Hello";
+val = list.children[1].children[0];
+val = list.children[1].children[0].href;
 
-// document.querySelectorAll()
-// id -> #
-// tag -> nothing
+val = list.firstChild;
+val = list.firstElementChild;
+val = list.lastChild;
+val = list.lastElementChild;
+val = list.childElementCount;
 
-// list = document.querySelectorAll('.sample-class');
-list = document.querySelectorAll('ol li');
-lis.forEach(item => {
-    console.log(item);
-});
+val = listItem.parentElement;
+val = listItem.parentNode;
+val = listItem.parentElement.parentElement;
 
-let liodd = document.querySelectorAll('li:nth-child(odd)');
-let lieven = document.querySelectorAll('li:nth-child(even)');
+val = listItem.nextSibling.nextSibling;
+val = listItem.nextElementSibling.nextElementSibling;
+val = document.querySelector('ul li:last-child');
+val = val.previousSibling;
+val = val.previousElementSibling;
 
-liodd.forEach(item =>{
-    item.style.background = 'grey';
-    item.style.color = 'white';
-
-});
-lieven.forEach(item =>{
-    item.style.background = 'red';
-    item.style.color = 'white';
-
-});
-
-console.log(list);
+console.log(val);
