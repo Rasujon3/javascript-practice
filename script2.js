@@ -1,36 +1,47 @@
-// document.getElementById() // single element niye kaj kore
+// Multiselector
+// document.getElementsByClassName()
 
-let val;
-// getting an Element
-val = document.getElementById('document-title');
-val = document.getElementById('document-title').id;
-val = document.getElementById('document-title').className;
+let list = document.getElementsByClassName('sample-class');
 
-// Changing Style
-document.getElementById('document-title').style.background='#333';
-document.getElementById('document-title').style.color='#fff';
-document.getElementById('document-title').style.padding='10px';
-document.getElementById('document-title').style.display='block';
+list[0].style.background = 'red';
+list[0].style.color = 'white';
+list[0].style.padding = '10px';
+list[0].textContent = 'Hello World';
 
-// Changing Content
-document.getElementById('document-title').textContent='New title';
-document.getElementById('document-title').innerText='AgainNew title';
-document.getElementById('document-title').innerHTML='<i>Again Again New Title</i>';
+// console.log(list[0]);
 
-val = document.getElementById('document-title');
-val.innerText = "Ha ha ha";
+// document.getElementsByTagName()
+list = document.getElementsByTagName('li');
+list = document.querySelector('ol').getElementsByTagName('li');
 
-// document.querySelector() // single element
-val = document.querySelector('#document-title');//id
-val = document.querySelector('.title-class');//class
-val = document.querySelector('h3');
-val = document.querySelector('ol');
-val = document.querySelector('ol li');//id
-val = document.querySelector('ol li');//id
-val.style.background = 'red';
-val.style.color = 'white';
-val = document.querySelector('li:last-child');
-val = document.querySelector('li:nth-child(even)').innerText = "Hello";
-val = document.querySelector('li:nth-child(odd)').innerText = "Hello";
 
-console.log(val);
+let lis = Array.from(list);
+lis.forEach(item => {
+    // console.log(item);
+});
+
+// document.querySelectorAll()
+// id -> #
+// tag -> nothing
+
+// list = document.querySelectorAll('.sample-class');
+list = document.querySelectorAll('ol li');
+lis.forEach(item => {
+    console.log(item);
+});
+
+let liodd = document.querySelectorAll('li:nth-child(odd)');
+let lieven = document.querySelectorAll('li:nth-child(even)');
+
+liodd.forEach(item =>{
+    item.style.background = 'grey';
+    item.style.color = 'white';
+
+});
+lieven.forEach(item =>{
+    item.style.background = 'red';
+    item.style.color = 'white';
+
+});
+
+console.log(list);
