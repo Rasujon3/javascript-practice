@@ -1,22 +1,17 @@
-// Remove Element
-let listItem = document.querySelectorAll('li');
-let list = document.querySelector('ul');
+// Events of Javascript
+// event w3school
+// Onclick
 
-// listItem[0].remove();
-// listItem[5].remove();
+// Event listener
 
-// list.removeChild(listItem[5]);
+// function message() {
+//     console.log("Mouse over button");
+// }
 
-list.classList.add("test");
-list.classList.add("test-new");
+let btn = document.getElementById('sample-btn').addEventListener('dblclick', message);
 
-list.classList.remove("samole-class");
+function message(params) {
+    console.log("Button Clicked");
+}
 
-let val = list.hasAttribute('title');
-list.setAttribute("title", "New-title");
-list.removeAttribute("title");
-
-console.log(val);
-
-console.log(list);
-console.log(listItem);
+console.log(btn);
