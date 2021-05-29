@@ -34,11 +34,24 @@ re = /hel{2}o/; // Must occur exactly 2 times
 re = /hel{2,5}o/; // range
 re = /hel{2,}o/; // atleast 2 times
 
+// Paranthesis () - Grouping
+re = /^([0-9]){3}/;
+re = /^([0-9]x){3}/;
+
+
+// Bangladeshi Phone Number Check:
+// re = /^01([0-9]){9}$/;
+// re = /^\+8801([0-9]){9}$/;
+
 
 str = "hello";
 str = "aello";
 str = "hello";
 str = "hellllllo";
+str = "32111jlja";
+str = "0176440165";
+str = "+8801764401650";
+str = "2x3x4x";
 
 
 
