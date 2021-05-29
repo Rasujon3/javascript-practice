@@ -1,42 +1,37 @@
-// Regular Expression
-// Pattern Matching Technique
-
 let re;
 let str;
-
+// Literal Character
 re = /hello/;
-re = /Hello/;
-re = /hello/i; // i = case insensitive
+re = /hello/i;
+re = /hell/i;
+re = /low/i;
 
-console.log(re);
-console.log(re.source);
+// Meta Characters
+re = /^hello/; // Must start with
+re = /World$/; // Must end with
+re = /^hello$/; // Must start and end with
+re = /^h.llo$/; // Matches any one character
+re = /h.llo/;
+re = /h*llo/;//0 or more times
+re = /he?a?llo/; // optional
+re = /hello\?/; // escaping
 
-str = "Hello World!";
-str = "Again Hello World!";
-str = "Hell World!";
-str = "sfsdHellofsd World!";
-str = "Again Hello World! hello";
-str = "World!";
 
-// exec() - Returns result in an array or null
-let result = re.exec(str);
+str = "hello World";
+str = "hello";
+str = "hereerllo";
+str = "hello?";
 
-// test() - true/false
-result = re.test(str);
 
-// match() - Returns array or null
-str = "Again Hello World! hello";
-result = str.match(re);
+console.log(re.exec(str));
 
-// search() - Returns index of the first match or -1
-str = "World";
-result = str.search(re);
+reText(re, str);
 
-// replace() - Return new string
-str = "Again Hello World! hello";
-let newstr = str.replace(re , "hi");
-
-console.log(result);
-console.log(str);
-console.log(re.source);
-console.log(newstr);
+function  reText(re, str) {
+    if(re.test(str)){
+        console.log(`'${str}' matches '${re.source}'`);
+    }
+    else{
+        console.log(`'${str}' doesn't match '${re.source}'`);
+    }
+}
