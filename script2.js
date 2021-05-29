@@ -17,10 +17,29 @@ re = /he?a?llo/; // optional
 re = /hello\?/; // escaping
 
 
-str = "hello World";
+// Chatacter Set Using Brackets []
+re = /h[eai]llo/; // Must be one of them inside brackets
+re = /[HA]ello/i;
+re = /[^ha]ello/; // Anything except those inside brackets
+re = /^[ha]ello/;//Must start with h or a
+re = /[A-Z]ello/; // Start with Upper Case
+re = /^[A-Z]/i; // Fisrt letter must be upper case
+re = /^[a-zA-Z]ello/;
+re = /^[0-9]ello/;
+re = /[^0-9]ello/;// not digit
+re = /[0-9][0-9]ello/; // not digit
+
+// Braces {} - Quantifier
+re = /hel{2}o/; // Must occur exactly 2 times
+re = /hel{2,5}o/; // range
+re = /hel{2,}o/; // atleast 2 times
+
+
 str = "hello";
-str = "hereerllo";
-str = "hello?";
+str = "aello";
+str = "hello";
+str = "hellllllo";
+
 
 
 console.log(re.exec(str));
