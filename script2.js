@@ -43,15 +43,33 @@ re = /^([0-9]x){3}/;
 // re = /^01([0-9]){9}$/;
 // re = /^\+8801([0-9]){9}$/;
 
+// Shorthand Character Classes
+re = /\w/; //Word Character - alpha numeric or _
+re = /\w+/ // one or more
+re = /\W/ // Non Word Character
+re = /\W+/ // One or More Character
+re = /\d/ // digit check
+re = /\d+/ // One or more digit check
+re = /\D/ // Non digit check
+re = /\s/ // match white spece
+re = /\S/ // match non white spece
+re = /Hello\b/ // word boundary
 
-str = "hello";
-str = "aello";
-str = "hello";
-str = "hellllllo";
-str = "32111jlja";
-str = "0176440165";
-str = "+8801764401650";
-str = "2x3x4x";
+
+
+str = "(*&^yajhkljafj7";
+str = "3&* ";
+str = "Hello ";
+
+
+// str = "hello";
+// str = "aello";
+// str = "hello";
+// str = "hellllllo";
+// str = "32111jlja";
+// str = "0176440165";
+// str = "+8801764401650";
+// str = "2x3x4x";
 
 
 
