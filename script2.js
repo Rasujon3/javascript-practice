@@ -55,11 +55,14 @@ re = /\s/ // match white spece
 re = /\S/ // match non white spece
 re = /Hello\b/ // word boundary
 
+// Assertions
+re = /x(?=y)/; // Matches x only if x is before y
+re = /x(?!y)/; // Matches x only if x is before y
 
 
-str = "(*&^yajhkljafj7";
-str = "3&* ";
-str = "Hello ";
+
+str = "xyoioijlj";
+str = "xoioijlj";
 
 
 // str = "hello";
